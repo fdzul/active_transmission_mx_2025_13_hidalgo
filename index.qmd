@@ -20,6 +20,7 @@ library(magrittr)
 ::: panel-tabset
 
 ### [**Huejutla de Reyes**]{style="color:#990000"}
+
 ```{r heatmap_huejutla}
 densnv::mp_heatmap(geocoded_datasets = z,
                    cve_edo = "13",
@@ -34,4 +35,23 @@ densnv::mp_heatmap(geocoded_datasets = z,
 ```
 
 
+### [**San Felipe Orizatlán**]{style="color:#990000"}
+
+```{r heatmap_felipe}
+densnv::mp_heatmap(geocoded_datasets = z,
+                   cve_edo = "13",
+                   locality = "San Felipe Orizatlan",
+                   status_caso = c(1, 2),
+                   week = c(1:53),
+                   zoom = NULL,
+                   map_type = NULL,
+                   alpha = 0.6,
+                   static = FALSE,
+                   palette = viridis::turbo)
+```
+
 :::
+
+
+
+
