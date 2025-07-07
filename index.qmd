@@ -10,7 +10,8 @@ theme: custom.scss
 library(sf)
 mapview::mapviewOptions(default = TRUE,
                         basemaps.color.shuffle = FALSE)
-load("/Users/felipedzul/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+#load("/Users/felipedzul/OneDrive/proyects/geocoding_mex/2025/8.RData/denmex_2025.RData")
+load("~/Documents/geocoding_mx/2025/8.RData/denmex_2025.RData")
 library(magrittr)
 ```
 
@@ -22,7 +23,7 @@ library(magrittr)
 ### [**Huejutla de Reyes**]{style="color:#990000"}
 
 ```{r heatmap_huejutla}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "13",
                    locality = "Huejutla de Reyes",
                    status_caso = c(1, 2),
@@ -39,7 +40,7 @@ densnv::mp_heatmap(geocoded_datasets = z,
 ### [**San Felipe Orizatlán**]{style="color:#990000"}
 
 ```{r heatmap_felipe}
-densnv::mp_heatmap(geocoded_datasets = z,
+densnv::mp_heatmap(geocoded_dataset = z,
                    cve_edo = "13",
                    locality = "San Felipe Orizatlan",
                    status_caso = c(1, 2),
